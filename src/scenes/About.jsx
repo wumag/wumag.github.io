@@ -1,6 +1,7 @@
 import LineGradient from "../components/LineGradient";
 // import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
+import React, { Component }  from 'react';
 
 const About = () => {
   // const isAboveLarge = useMediaQuery("(min-width: 1060px)");
