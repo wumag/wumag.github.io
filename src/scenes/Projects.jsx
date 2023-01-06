@@ -16,7 +16,7 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title }) => {
+const Project = ({ title, subtitle }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
@@ -24,7 +24,7 @@ const Project = ({ title }) => {
   return (
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
-        <p className="text-2xl font-playfair">{title}</p>
+        <p className="text-2xl font-playfair">{subtitle}</p>
         <p className="mt-7">
           under construction...
         </p>
@@ -60,9 +60,6 @@ const Projects = () => {
         <p className="mt-10 mb-10">
           Excited to see what I have to show?!
         </p>
-        {/* <p className="text-sm mt-10 mb-10">
-          Yeah, me too.
-        </p> */}
       </motion.div>
 
       {/* PROJECTS */}
