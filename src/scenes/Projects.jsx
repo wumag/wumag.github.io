@@ -59,9 +59,9 @@ const Projects = () => {
         <p className="mt-10 mb-10">
           Excited to see what I have to show?!
         </p>
-        <p className="text-sm mt-10 mb-10">
+        {/* <p className="text-sm mt-10 mb-10">
           Yeah, me too.
-        </p>
+        </p> */}
       </motion.div>
 
       {/* PROJECTS */}
