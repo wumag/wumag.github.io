@@ -86,7 +86,7 @@ const Projects = () => {
           {/* ROW 2 */}
           <Project title="Project 3" />
           <Project title="Project 4" />
-          <Project title="Project 5" />
+          <Project title="Ludo Game" />
         </motion.div>
       </div>
     </section>
