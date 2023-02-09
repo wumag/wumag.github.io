@@ -16,7 +16,7 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title, subtitle }) => {
+const Project = ({ title, subtitle, link }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
@@ -24,12 +24,10 @@ const Project = ({ title, subtitle }) => {
   return (
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
-        <p className="text-2xl font-playfair">{subtitle}</p>
-        <p className="mt-7">
-          under construction...
-        </p>
+        <p className="text-2xl font-playfair">{title}</p>
+        {link ? <a href={link}>{subtitle}</a> : <p>{subtitle}</p>}
       </div>
-      <img src={`../assets/${projectTitle}.jpeg`} alt={projectTitle} />
+      <img src={`../assets/${projectTitle}.png`} alt={projectTitle} />
     </motion.div>
   );
 };
@@ -57,9 +55,7 @@ const Projects = () => {
             <LineGradient width="w-2/3" />
           </div>
         </div>
-        <p className="mt-10 mb-10">
-          Excited to see what I have to show?!
-        </p>
+        <pre>     </pre>
       </motion.div>
 
       {/* PROJECTS */}
@@ -72,19 +68,19 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {/* ROW 1 */}
+          <Project title="Kwik-E-Mart Website" subtitle="A client-side app that allows users to order products and register for an email subscription" link="https://github.com/wumag/osu-cs290-f22-project-8"/>
+          <Project title="Calorie Calculator" subtitle="A text-based calculator using the Mifflin-St Jeor formula to calculate calories needed a day to maintain current weight" link="https://github.com/wumag/osu-cs361-w23-calorie-calculator"/>
+          <Project title="Exercise Tracker" subtitle="A single page application that tracks exercises completed by the user" link="https://github.com/wumag/osu-cs290-f22-portfolio"/>
+
+          {/* ROW 2 */}
+          <Project title="User Database" subtitle="A web app that modelled a random users properties using separate model code and controller code" link="https://github.com/wumag/osu-cs290-f22-project-6"/>
+          <Project title="Ludo Game" subtitle="A strategy board game involving object-oriented programming principles, multiple classes, and data structures" link="https://github.com/wumag/osu-cs162-u22-portfolio"/>
           <div
             className="flex justify-center text-center items-center p-10 bg-blue
               max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
           >
-            under construction...
+            And more projects in the making...
           </div>
-          <Project title="Project 1" />
-          <Project title="Project 2" />
-
-          {/* ROW 2 */}
-          <Project title="Project 3" />
-          <Project title="Project 4" />
-          <Project title="Ludo Game!" />
         </motion.div>
       </div>
     </section>

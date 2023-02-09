@@ -18,11 +18,12 @@
     },
     "scripts": {
         "start": "react-scripts start",
+        "set-domain": "echo \"maggiewu.tech\" > build/CNAME",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "deploy": "npm run set-domain && gh-pages -d build"
     },
     "eslintConfig": {
         "extends": [

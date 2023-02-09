@@ -30,7 +30,7 @@ const About = () => {
           </p>
           <p className="mt-2 mb-2">
             <b>I am</b> a post-baccalaureate computer science student at Oregon State University, on track to graduate
-            by fall of 2023.
+            by summer of 2024.
           </p>
           <p className="mt-2 mb-2">
             <b>I love</b> to create aesthetically pleasing pieces, whether it be through programming, digital design or 
